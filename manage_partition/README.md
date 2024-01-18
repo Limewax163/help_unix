@@ -31,7 +31,19 @@ ___
 - q: Выйти из утилиты fdisk без сохранения изменений.
 ___
 
-`sudo mkswap /dev/sdXN `
+`sudo mkswap /dev/sdXN ` создание раздела под SWAP
+
+После создания его необходимо указать в /etc/fstab по UUID
+
+`lsblk -f` - этой командой смотрим UUID у раздела SWAP
+
+`sudo nano /etc/fstab' - в fstab добавляем строчку
+
+`UUID=a9fa39fe-93a8-44eb-9520-e21a308993e7       none    swap    sw      0       0`
+
+`sudo swapon -a` применяет изменения для SWAP
+
+
 
 > [!NOTE]
 > Правильной практикой будет - создать отдельный раздел под SWAP размером либо RAM x2, либо 1к1
