@@ -8,3 +8,6 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 `usermod -aG <group> <user>` добавляет пользователя `<user>` в группу `<group>` ( -addGROUP )
 
 `usermod -d </new/home/dir> <user>` меняет домашнюю директорию пользователя
+
+`sudo fail2ban-client set sshd unbanip <ip чела>`
+
