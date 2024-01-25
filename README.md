@@ -9,6 +9,8 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 
 `usermod -md </new/home/dir> <user>` меняет домашнюю директорию пользователя (флаг -d) и переносит все ее содержимое вместе с доступами (флаг -m)
 
-`fail2ban-client status sshd`
+`fail2ban-client status sshd` посмотреть список блокировок по ssh в fail2ban
 
-`sudo fail2ban-client set sshd unbanip <ip чела>`
+`fail2ban-client set sshd unbanip <ip чела>` разблокировать ip в fail2ban
+
+`lsof -nP -iTCP -sTCP:LISTEN` посмотреть список всех прослушиваемых портов
