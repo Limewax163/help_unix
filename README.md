@@ -7,7 +7,7 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 
 `usermod -aG <group> <user>` добавляет пользователя `<user>` в группу `<group>` ( -addGROUP )
 
-`usermod -md </new/home/dir> <user>` меняет домашнюю директорию пользователя (ключ -d) и переносит все ее содержимое вместе с доступами (-m)
+`usermod -md </new/home/dir> <user>` меняет домашнюю директорию пользователя (флаг -d) и переносит все ее содержимое вместе с доступами (флаг -m)
 
 `fail2ban-client status sshd`
 
