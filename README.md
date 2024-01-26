@@ -1,4 +1,5 @@
-`scp </path/to/file/file.txt> <user>@<host>:/</path/to/destination/>` - Копирование через портокол ssh с одного хоста на другой
+`scp </path/to/file/file.txt> <user>@<host>:/</path/to/destination/>` - Копирование файлв через протокол ssh с одного хоста на другой
+`rsync -av </path/to/destination/folder> <user>@<host>:/</path/to/destination/>` - Копирование директории через протокол ssh с одного хоста на другой
 
 Миграция таблиц в бд
 mysql -p -u <user> <database> -> source /path/to/database_dump.sql
