@@ -16,37 +16,25 @@
 1. -t:  Флаг говорит msmtp интерпретировать письмо, которое будет отправлено, как текстовое сообщение. Это означает, что msmtp не будет ожидать ввода дополнительной информации, такой как заголовки письма.
 1. -i: Флаг говорит msmtp игнорировать пробелы в начале строчек текста и не интерпретировать их как инструкции для изменения поведения отправки.
 
+Примерная конфигурация .msmtprc
 
-Параметры [mail function] в папке проекта, конфигурационный файл:
+```
+account www-data
+host ip_mailserver
+port 1025
+keepbcc on
+tls on
+tls_certcheck off
 
-www/old-develop.soglasie.ru/docker/app/conf/php.ini
-mail function
-; For Win32 only.
-; http://php.net/smtp
-SMTP = 172.17.0.1
-; http://php.net/smtp-port
-smtp_port = 1025
- 
-; For Win32 only.
-; http://php.net/sendmail-from
-;sendmail_from = site@soglasie.ru
- 
-; For Unix only. You may supply arguments as well (default: "sendmail -t -i").
-; http://php.net/sendmail-path
-;sendmail_path = /usr/sbin/sendmail -t -i
-sendmail_path = /usr/bin/msmtp -C ./.msmtprc -a default -t -i
+auth on
+user user_mailserver
+password secret_from_user_mailserver
 
+from mail@domain.ru
+logfile /path/to/msmtp.log
+maildomain domain.ru
+```
 
-Весь каталог проекта </www/old-develop.soglasie.ru/> монтируется в контейнер, в директорию /var/www, соответственно заранее подготовленный файл <.msmtprc> который лежит в корне будет смонтирован в контейнер.
-
-В сценарии сборки контейнера app (www/old-develop.sogalsie.ru/docker/app/Dockerfile) одним из последних команд выбирается пользователь www-data и началный каталог /var/www/
-
-
-
-В итоге после формировании письма из кода вызывается msmtp, к нему добавляется конфига с настройками отправки.
-
-
-
-Для отправки почты файл .msmtprc может содержать конф. информацию, к чему msmtp чувствителен. Для выполнения команды отправки письма необходимо быть владельцем файла .msmtprc и доступ к файлу должен быть ограничен chmod 600
+> [!NOTE]Для отправки почты файл .msmtprc может содержать конф. информацию, к чему msmtp чувствителен. Для выполнения команды отправки письма необходимо быть владельцем файла .msmtprc и доступ к файлу должен быть ограничен chmod 600
 
 После настройки можно бежать в контейнер docker и прямо из контейнера попытаться отправить письмо шаблоном указанным выше.
