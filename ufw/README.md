@@ -1,6 +1,6 @@
 <div align="center">
 
-# UFW
+# UFW (Uncomplicated Firewall или «простой брандмауэр»)
 
 </div>
   
