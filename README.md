@@ -1,10 +1,10 @@
-## [manage partition](https://github.com/Limewax163/help_unix/tree/main/manage_partition)
+## [manage partition](https://github.com/Limewax163/help_unix/tree/main/manage_partition/README.md)
 
-## [ssl](https://github.com/Limewax163/help_unix/tree/main/SSL)
+## [ssl](https://github.com/Limewax163/help_unix/tree/main/SSL/README.md)
 
-## [msmtp](https://github.com/Limewax163/help_unix/tree/main/msmtp)
+## [msmtp](https://github.com/Limewax163/help_unix/tree/main/msmtp/README.md)
 
-## [ufw](https://github.com/Limewax163/help_unix/tree/main/ufw)
+## [ufw](https://github.com/Limewax163/help_unix/tree/main/ufw/README.md)
 
 `scp </path/to/file/file.txt> <user>@<host>:/</path/to/destination/>` - Копирование файлв через протокол ssh с одного хоста на другой
 
