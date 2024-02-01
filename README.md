@@ -25,4 +25,15 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 
 `lsof -nP -iTCP -sTCP:LISTEN` посмотреть список всех прослушиваемых портов
 
-| | | :------------------------: | | Текст, который будет центрирован |
+|            |
+|------------|
+| Текст 1    |
+| Текст 2    |
+| Текст 3    |
+
+<style>
+table {
+  width: 100%;
+  text-align: center;
+}
+</style>
