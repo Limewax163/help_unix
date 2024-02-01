@@ -4,8 +4,9 @@
 
 </div>
 
-1. []
+1. join_domain_linux
    - [common-session](https://github.com/Limewax163/help_unix/blob/main/join_domain_linux/common-session)
-   - [common-session]()
-   - []()
-   - []()
+   - [krb5.conf](https://github.com/Limewax163/help_unix/blob/main/join_domain_linux/krb5.conf)
+   - [nsswitch.conf](https://github.com/Limewax163/help_unix/blob/main/join_domain_linux/nsswitch.conf)
+   - [resolv.conf](https://github.com/Limewax163/help_unix/blob/main/join_domain_linux/resolv.conf)
+   - [smb.conf](https://github.com/Limewax163/help_unix/blob/main/join_domain_linux/smb.conf)
