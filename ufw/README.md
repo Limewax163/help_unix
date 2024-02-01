@@ -1,5 +1,9 @@
-# UFW COMMAND SETTING
+<div align="center">
 
+# UFW
+
+</div>
+  
 `ufw enable` - Включить встроенный фаервол Ubuntu
 
 >[!NOTE]
