@@ -24,9 +24,3 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 `fail2ban-client set sshd unbanip <ip чела>` разблокировать ip в fail2ban
 
 `lsof -nP -iTCP -sTCP:LISTEN` посмотреть список всех прослушиваемых портов
-
-|            |
-|------------|
-| Текст 1    |
-| Текст 2    |
-| Текст 3    |
