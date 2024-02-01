@@ -1,6 +1,4 @@
-## 
-
-<center>[manage partition](https://github.com/Limewax163/help_unix/tree/main/manage_partition/README.md)</center>
+## [manage partition](https://github.com/Limewax163/help_unix/tree/main/manage_partition/README.md)
 
 ## [ssl](https://github.com/Limewax163/help_unix/tree/main/SSL/README.md)
 
