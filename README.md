@@ -1,3 +1,5 @@
+<div align="center">
+
 ## [manage partition](https://github.com/Limewax163/help_unix/tree/main/manage_partition/README.md)
 
 ## [ssl](https://github.com/Limewax163/help_unix/tree/main/SSL/README.md)
@@ -5,6 +7,8 @@
 ## [msmtp](https://github.com/Limewax163/help_unix/tree/main/msmtp/README.md)
 
 ## [ufw](https://github.com/Limewax163/help_unix/tree/main/ufw/README.md)
+
+</div>
 
 `scp </path/to/file/file.txt> <user>@<host>:/</path/to/destination/>` - Копирование файлв через протокол ssh с одного хоста на другой
 
@@ -25,8 +29,8 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 
 `lsof -nP -iTCP -sTCP:LISTEN` посмотреть список всех прослушиваемых портов
 
-<div align="center">
+
 
 # Заголовок
 
-</div>
+
