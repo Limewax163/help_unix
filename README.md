@@ -29,4 +29,4 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 
 `lsof -nP -iTCP -sTCP:LISTEN` посмотреть список всех прослушиваемых портов
 
-mysqldump -u <user> -h xxx.xxx.xxx.xxx -p --no-tablespaces <database> > backup.sql - создание дамба базы данных
+`mysqldump -u <user> -h xxx.xxx.xxx.xxx -p --no-tablespaces <database> > backup.sql` - создание дамба базы данных
