@@ -10,6 +10,7 @@
 
 ## [database](https://github.com/Limewax163/help_unix/blob/main/database/README..md)
 
+## SSH ##
 </div>
 
 `scp </path/to/file/file.txt> <user>@<host>:/</path/to/destination/>` - Копирование файлв через протокол ssh с одного хоста на другой
