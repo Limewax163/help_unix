@@ -43,3 +43,5 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 `docker ps -s --format "table {{.Names}}\t{{.Size}}" | sort -k2 -h -r` покажет сколько занимают памяти контейнеры с выводом по шаблону только имя контейнера и занятую память с сортировкой по убыванию занятой памяти
 
 `docker system df` покажет сколько памяти используют все контейнеры в системе
+
+Вы можете уничтожить все свои контейнеры и изображения с помощьюdocker `rm -f $(docker ps -aq) && docker rmi -f $(docker images -q)`
