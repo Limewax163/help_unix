@@ -44,6 +44,6 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 
 `docker system df` покажет сколько памяти используют все контейнеры в системе
 
-Вы можете уничтожить все свои контейнеры и изображения с помощьюdocker `rm -f $(docker ps -aq) && docker rmi -f $(docker images -q)`
+Вы можете уничтожить все свои контейнеры и изображения с помощью `docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -q)`
 
 `ncdu` сервис который сканирует файловую систему и показывает занятое место
