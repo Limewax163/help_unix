@@ -26,8 +26,8 @@
 <details>
   <summary>Примерная конфигурация .msmtprc</summary>
 
-<code>
-account www-data
+
+<code>account www-data
 host ip_mailserver
 port 1025
 keepbcc on
@@ -40,8 +40,7 @@ password secret_from_user_mailserver
 
 from mail@domain.ru
 logfile /path/to/msmtp.log
-maildomain domain.ru
-</code>
+maildomain domain.ru</code>
 
 </details>
 
