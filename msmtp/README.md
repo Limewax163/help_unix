@@ -23,9 +23,10 @@
 
 </details>
 
-Примерная конфигурация .msmtprc
+<details>
+  <summary>Примерная конфигурация .msmtprc</summary>
 
-```
+<code>
 account www-data
 host ip_mailserver
 port 1025
@@ -40,7 +41,9 @@ password secret_from_user_mailserver
 from mail@domain.ru
 logfile /path/to/msmtp.log
 maildomain domain.ru
-```
+</code>
+
+</details>
 
 > [!NOTE]
 > Для отправки почты файл .msmtprc может содержать конф. информацию, к чему msmtp чувствителен. Для выполнения команды отправки письма необходимо быть владельцем файла .msmtprc и доступ к файлу должен быть ограничен chmod 600
