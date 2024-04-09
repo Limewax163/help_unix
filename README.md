@@ -83,3 +83,5 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 </details>
 
 `smem -s swap` - Проверка используемой swap памяти процессами
+
+`source .env && echo $DB_PASSWORD` - так можно посмотреть как читается переменная из определенного файла
