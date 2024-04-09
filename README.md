@@ -89,6 +89,7 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 <details>
   <summary><code>rsync -av --ignore-non-existing test2/ test1/</code> - для более детального копирования файлов</summary>
 
+> [!NOTE]
 > rsync в данной команде из директории test2 рекурсивно копирует все файлы и вставляет в директорию test1, причем всю остальную структуру директорий и каталогов он оставляет не тронутой. Условный файл находившийся в test2/path/to/FILE будет скопирован в директорию
 > test1/path/to/FILE, а остальные файлы в этой директори останутся не тронутыми
 
