@@ -8,3 +8,5 @@
 - указать путь до дампа: `source /path/to/database_dump.sql;` - для миграции таблиц из дампа в базу
 
 </details>
+
+`SELECT User, Host FROM mysql.user;` - посмотреть пользователей в СУБД
