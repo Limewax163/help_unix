@@ -7,6 +7,6 @@
 `pg_dump -U your_username -d your_database --ignore-table=public.table1 --ignore-table=public.table2 > backup.sql` - создается бекап БД `<your_database>` исключая таблицы `<table1>` и `<table2>`
 
 >[!NOTE]
->Если не указывать в конструкции выше схему таблицы, то автоматически pgsq выберет схему `<public>` в примере выше схема по умолчанию указана явно `--ignore-table=public.table`
+>Если не указывать, в конструкции выше, схему таблицы, то автоматически pgsq выберет схему `<public>` в примере выше схема по умолчанию указана явно `--ignore-table=public.table`
 >
 >Схема указывается в формате `<schema>.<table_name>`
