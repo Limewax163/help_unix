@@ -113,8 +113,6 @@ __
 
 <details>
   <summary><code>Вызывается командой<code>tar`</code></summary>
-
-Флаги:
 ___
 
 - `-c` --create: Создать архив.
