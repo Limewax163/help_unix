@@ -113,7 +113,7 @@ __
 
 <details>
   <summary><code>Вызывается командой<code>tar`</code></summary>
-___
+
 
 - `-c` --create: Создать архив.
 - `-x` --extract, --get: Извлечь файлы из архива.
