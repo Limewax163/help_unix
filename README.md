@@ -112,9 +112,10 @@ __
 ### Архиватор tar
 
 <details>
-  <summary><code>Вызывается командой<code>tar`</code></summary>
+  <summary><code>Вызывается командой<code>tar</code></summary>
 
-
+Флаги:
+___
 - `-c` --create: Создать архив.
 - `-x` --extract, --get: Извлечь файлы из архива.
 - `-f` --file <архив>: Указать имя файла архива.
