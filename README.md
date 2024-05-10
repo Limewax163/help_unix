@@ -133,7 +133,9 @@ ___
 </details>
 
 
-Windows
+### Windows
+___
+
 `netsh wlan show network` - посмотреть список доступных сетей
 
 `netsh wlan show profile` - посмотреть список сохраненных сетей
