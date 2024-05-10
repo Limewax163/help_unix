@@ -132,9 +132,9 @@ ___
 
 </details>
 
+___
 
 ### Windows
-___
 
 `netsh wlan show network` - посмотреть список доступных сетей
 
