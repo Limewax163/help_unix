@@ -1,3 +1,5 @@
+### Про бекапы
+
 `pg_dump -U <user> -W -h <ip/host> -p <port/default-5432> <dbname> > ./path/to/dump.dump` - дамп определенной базы данных POSTGRES
 
 `psql -U <user> -d <database> -h <ip/host> -p <port/default-5432> -f /path/to/backup.sql` - восстановление из бекапа(дампа)
@@ -10,3 +12,8 @@
 >Если не указывать, в конструкции выше, схему таблицы, то автоматически pgsq выберет схему `<public>` в примере выше схема по умолчанию указана явно `--ignore-table=public.table`
 >
 >Схема указывается в формате `<schema>.<table_name>`
+
+___
+
+### Про подключение
+
