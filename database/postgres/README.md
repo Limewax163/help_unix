@@ -18,7 +18,7 @@ ___
 ### Про подключение
 
 <details>
-  <summary><code>psql -U <user> -d <database> -h <ip/host> -p <port/default-5432></code> - подключение к БД</summary>
+  <summary><code>psql -U user -d database -h ip/host -p port/default-5432</code> - подключение к БД</summary>
 
 > соответственно если БД находится в контейнере можно передать в него через docker exec не заходя в контейнер
 
