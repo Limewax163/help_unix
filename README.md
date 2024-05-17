@@ -167,3 +167,13 @@ StrictModes no
 4. Рестартануть сервис ssh
 
 </details>
+
+<details>
+  <summary>Почистить WinSxS</summary>
+
+- ```schtasks.exe /Run /TN "\Microsoft\Windows\Servicing\StartComponentCleanup"```
+- ```Dism.exe /online /Cleanup-Image /StartComponentCleanup```
+- ```Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase```
+
+</details>
+
