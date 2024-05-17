@@ -171,9 +171,20 @@ StrictModes no
 <details>
   <summary>Почистить WinSxS</summary>
 
-- ```schtasks.exe /Run /TN "\Microsoft\Windows\Servicing\StartComponentCleanup"```
-- ```Dism.exe /online /Cleanup-Image /StartComponentCleanup```
-- ```Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase```
+Лучше выполнять в том порядке в котором указано, за исключением первых двух команд (StartComponentCleanup через планировщик либо через dism)
+
+- StartComponentCleanup в планировщике задач для очистки и сжатия компонентов
+```
+schtasks.exe /Run /TN "\Microsoft\Windows\Servicing\StartComponentCleanup"
+```
+- Использование параметра Dism.exe `/StartComponentCleanup` (предыдущие версии обновленных компонентов будут немедленно удалены, в планировщике задан слип 1ч)
+```
+Dism.exe /online /Cleanup-Image /StartComponentCleanup
+```
+- Удаляет все замененные версии каждого компонента в хранилище компонентов (много чистит)
+```
+Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+```
 
 </details>
 
