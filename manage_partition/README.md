@@ -56,6 +56,7 @@
 
 ```
 sudo sh -c 'echo 1 > /sys/block/<disk>/device/rescan'
+```
 
 3. `sudo growpart /deb/<disk> <disk_part>` Увеличивает раздел `<disk_parted>` на свободное место диска `/deb/<disk>`
 4. `sudo resize2fs /dev/<disk_part>` Изменяет размер файловой системы раздела на доступное неразмеченное место
