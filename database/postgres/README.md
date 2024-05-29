@@ -12,6 +12,15 @@
 
 </details>
 
+`pg_lsclusters` - посмотреть состояния кластеров
+
+`sudo pg_lscluster <version> <cluster> <action> [-- <pg_ctl options>]` - произвести какие-то манипуляции с кластером
+
+> [!NOTE]
+> Все конфиги по умолчанию находятся в `/etc/postgresql/<version>/main/`
+> - pg_hba.conf - про подключения
+> - postgresql.conf - главные настройки
+
 <details>
   <summary>Немного по администрированию</summary>
 
