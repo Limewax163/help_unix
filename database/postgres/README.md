@@ -34,7 +34,7 @@
   - `\du` - посмотреть пользователей
   - `SELECT * FROM <table_name>;` - посмотреть структуру таблицы и содержимое
   - `CREATE USER <username> WITH PASSWORD '<password>';` - создать пользователя с паролем
-  - `CREATE DATABASE database_name;` - создать БД
+  - `CREATE DATABASE <db_name>;` - создать БД
   - `GRANT ALL PRIVILEGES ON DATABASE database_name TO username;` - добавить права на таблицу пользователю (все)
   - `ALTER ROLE <user> <ROLE>;` - Добавить роль для пользователя (чтобы отнять `ALTER ROLE <user> NO<ROLE>;`)
     - `SUPERUSER`
