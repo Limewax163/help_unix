@@ -1,4 +1,4 @@
-### Про подключение
+### Про подключение и по администрированию
 
 <details>
   <summary><code>psql -U user -d database -h ip/host -p port/default-5432</code> - подключение к БД</summary>
