@@ -3,7 +3,19 @@
 <details>
   <summary><code>psql -U user -d database -h ip/host -p port/default-5432</code> - подключение к БД</summary>
 
-> соответственно если БД находится в контейнере можно передать в него через docker exec не заходя в контейнер
+- Флаги:
+  - `-U` - Пользователь
+  - `-d` - База
+  - `-W` - Запрос ввода пароля
+  - `-h` - Хост
+  - `-p` - Порт
+
+</details>
+
+<details>
+  <summary><code>Немного по администрированию</summary>
+
+> соответственно если БД находится в контейнере можно передать в него через `docker exec -it ... bash` не заходя в контейнер
 
 - По командам уже внутри БД
   - `\l` - посмотреть список баз данных
@@ -11,8 +23,18 @@
   - `\dt` - посмотреть таблицы в выбранной БД
     - возможно потребуется указать схему в формате `\dt <schema.*>`
   - `\dt+ <table_name>` - посмотреть подробную информацию по таблице
+  - `\du` - посмотреть пользователей
   - `SELECT * FROM <table_name>;` - посмотреть структуру таблицы и содержимое
-
+  - `CREATE USER <username> WITH PASSWORD '<password>';` - создать пользователя с паролем
+  - `CREATE DATABASE database_name;` - создать БД
+  - `GRANT ALL PRIVILEGES ON DATABASE database_name TO username;` - добавить права на таблицу пользователю (все)
+  - `ALTER ROLE <user> <ROLE>;` - Добавить роль для пользователя (чтобы отнять `ALTER ROLE <user> NO<ROLE>;`)
+    - `SUPERUSER`
+    - `CREATEDB`
+    - `CREATEROLE`
+    - `LOGIN`
+    - `...`
+  
 </details>
 
 ___
