@@ -31,6 +31,8 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 - `which <shell_service>` - команда которая показывает где находится исполняемый программой bin файл (например which docker вернет информацию о местоположении исполняемого файла docker - /usr/bin/docker)
 - `resolvectl flush-caches` - сброс кэша DNS на сервере (старая команда: `systemd-resolve --flush-caches`)
 
+___
+
 <details>
   <summary><b>du и NCDU</b></summary>
 
@@ -52,6 +54,8 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 `ncdu /path/to/scan` сервис который сканирует файловую систему и показывает занятое место (визуальный буст du)
 
 </details>
+
+___
 
 `smem -s swap` - Проверка используемой swap памяти процессами
 
