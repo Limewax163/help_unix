@@ -95,15 +95,13 @@ ___
 
 ___
 
-> [!NOTE]
-> Для автоматизации процессов можно использовать make. Создается файл `<Makefile>`.
-> Пример и наглядное понимания построения структуры файла [`MAKEFILE`](https://github.com/Limewax163/k8s/blob/main/Makefile.md)
-> 
-> Makefile не нужны права на исполнение
+<details>
+  <summary><b>Makefile</b></summary>
 
-
+</details>
 
 ___
+
 
 ### Windows
 
