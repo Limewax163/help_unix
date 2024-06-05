@@ -32,7 +32,7 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 - `resolvectl flush-caches` - сброс кэша DNS на сервере (старая команда: `systemd-resolve --flush-caches`)
 
 <details>
-  <summary>du и NCDU</summary>
+  <summary><b>du и NCDU</b></summary>
 
 `sudo du -sch * .[!.]* | sort -rh | head` - для поиска и сортировки по размеру через du
 
