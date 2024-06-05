@@ -13,13 +13,8 @@
 ## [SSH](https://github.com/Limewax163/help_unix/blob/main/SSH/README.md) ##
 </div>
 
-`scp </path/to/file/file.txt> <user>@<host>:/</path/to/destination/>` - Копирование файлв через протокол ssh с одного хоста на другой
-
-`rsync -av </path/to/destination/folder> <user>@<host>:/</path/to/destination/>` - Копирование директории через собственный протокол (работает поверх TCP) с одного хоста на другой (флаг -a `archive` архивирует перед передачей, для того чтобы сохранить все свойства папок и файлов, флаг -v `verbose` для отображения на экран подробной информации о процессе копирования)
-
-Миграция таблиц в бд
-mysql -p -u <user> <database> -> source /path/to/database_dump.sql
-
+- `scp </path/to/file/file.txt> <user>@<host>:/</path/to/destination/>` - Копирование файлв через протокол ssh с одного хоста на другой
+- `rsync -av </path/to/destination/folder> <user>@<host>:/</path/to/destination/>` - Копирование директории через собственный протокол (работает поверх TCP) с одного хоста на другой (флаг -a `archive` архивирует перед передачей, для того чтобы сохранить все свойства папок и файлов, флаг -v `verbose` для отображения на экран подробной информации о процессе копирования)
 - `adduser <name user>` создать пользователя linux
 - `usermod -aG <group> <user>` добавляет пользователя `<user>` в группу `<group>` ( -addGROUP )
 - `usermod -md </new/home/dir> <user>` меняет домашнюю директорию пользователя (флаг -d) и переносит все ее содержимое вместе с доступами (флаг -m)
@@ -30,6 +25,8 @@ mysql -p -u <user> <database> -> source /path/to/database_dump.sql
 - `tcpdump -i any -n tcp port 10050` - интерактивно слушает все пакеты которые бегают по опредленному порту (в данном случае по 10050)
 - `which <shell_service>` - команда которая показывает где находится исполняемый программой bin файл (например which docker вернет информацию о местоположении исполняемого файла docker - /usr/bin/docker)
 - `resolvectl flush-caches` - сброс кэша DNS на сервере (старая команда: `systemd-resolve --flush-caches`)
+- `smem -s swap` проверка используемой swap памяти процессами
+- `source .env && echo $DB_PASSWORD` посмотреть как читается переменная из определенного файла
 
 ___
 
@@ -57,13 +54,8 @@ ___
 
 ___
 
-`smem -s swap` - Проверка используемой swap памяти процессами
-
-`source .env && echo $DB_PASSWORD` - так можно посмотреть как читается переменная из определенного файла
-
 <details>
   <summary><code>rsync -av --ignore-non-existing test2/ test1/</code> - для более детального копирования файлов</summary>
-__
 
 > rsync в данной команде из директории test2 рекурсивно копирует все файлы и вставляет в директорию test1, причем всю остальную структуру директорий и каталогов он оставляет не тронутой. Условный файл находившийся в test2/path/to/FILE будет скопирован в директорию
 > test1/path/to/FILE, а остальные файлы в этой директори останутся не тронутыми
