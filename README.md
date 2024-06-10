@@ -15,6 +15,8 @@
 ## [make](https://github.com/Limewax163/help_unix/tree/main/make/README.md)
 
 ## [win](https://github.com/Limewax163/help_unix/tree/main/win/README.md)
+
+## [logrotate](https://github.com/Limewax163/help_unix/blob/main/logrotate/README.md)
 </div>
 
 - `scp </path/to/file/file.txt> <user>@<host>:/</path/to/destination/>` - Копирование файлв через протокол ssh с одного хоста на другой
