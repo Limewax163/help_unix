@@ -26,7 +26,7 @@ icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /g
 ```
 StrictModes no
 ```
-4. Рестартануть сервис ssh
+4. Рестартануть сервис ssh (OpenSSH SSH Server)
 
 </details>
 
