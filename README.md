@@ -38,6 +38,10 @@
 - `resolvectl flush-caches` - сброс кэша DNS на сервере (старая команда: `systemd-resolve --flush-caches`)
 - `smem -s swap` проверка используемой swap памяти процессами
 - `source .env && echo $DB_PASSWORD` посмотреть как читается переменная из определенного файла
+- `chown user:group /path/to/file` Меняет владельца файла (пользователь:группа)
+  - `-R` - рекурсивно ко всем подкаталогам
+  - `--reference` Копирует права от определенной директории/файла к другому формат команды будет следующим:
+    - `chown/chmod --reference /path/to/source/file /path/to/target/file`
 
 ___
 
