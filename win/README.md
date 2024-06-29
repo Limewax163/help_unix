@@ -2,6 +2,7 @@
 
 - `netsh wlan show network` - посмотреть список доступных сетей
 - `netsh wlan show profile` - посмотреть список сохраненных сетей
+- `netsh wlan show networks` - посмотреть доступные сети (сканирование)
 - `netsh connect name=<name>` - подключить уже сохраненную(с паролем) сеть. Но если надо подключить новую то добавить `ssid=<ssid> password=<password> соль=<перец> по вкусу`
 
 > [!NOTE]
