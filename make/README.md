@@ -1,31 +1,15 @@
-```shell
+```Makefile
 .ONESHELL: ;
 .NOTPARALLEL: ;
-
 default: help;
 
-help:
+FRMT_NORM=\033[0m
+FRMT_INVRS=\033[7m
 
-.PHONY preprovision destroy
-preprovision:
-  echo "Cluster Deployment"                      #Команды после указания вызова должны быть записаны через табуляцию (в том числе не подразумеваются 8 пробелов)
-  kind create cluster --config kind.yaml
-destroy:
-  kind delete cluster --name kind
+.PHONY: help
+help: ## Информация о доступных командах
+        @egrep -h '\s##\s' Makefile | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
-.PHONY install-app
-install-app:
-  echo "Namespase create"
-  kubectl apply -f ns.yaml
-  echo "Database deployment"
-  kubectl apply -f db.yaml  
-
-.PHONY clean-app
-clean-app:
-  echo "Database delete"
-  kubectl delete -f db.yaml
-  echo "Namespase delete"
-  kubectl delete -f ns.yaml
 
 ```
 Шаблон команды:
