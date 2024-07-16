@@ -31,7 +31,7 @@
 - `usermod -md </new/home/dir> <user>` меняет домашнюю директорию пользователя (флаг -d) и переносит все ее содержимое вместе с доступами (флаг -m)
 - `fail2ban-client status sshd` посмотреть список блокировок по ssh в fail2ban
 - `fail2ban-client set sshd unbanip <ip чела>` разблокировать ip в fail2ban
-- `lsof -nP -iTCP<port/or nothing to all> -sTCP:LISTEN` посмотреть список всех прослушиваемых портов
+- `lsof -nP -iTCP<:port/or nothing to all> -sTCP:LISTEN` посмотреть список всех прослушиваемых портов
 - `:w !sudo tee %` если вдруг запущен vim все отредактировано а доступа нет (сохраняет файл с правами sudo)
 - `tcpdump -i any -n tcp port 10050` - интерактивно слушает все пакеты которые бегают по опредленному порту (в данном случае по 10050)
 - `which <shell_service>` - команда которая показывает где находится исполняемый программой bin файл (например which docker вернет информацию о местоположении исполняемого файла docker - /usr/bin/docker)
