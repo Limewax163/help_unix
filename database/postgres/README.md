@@ -30,9 +30,9 @@
   - `\c <db_name>` - выбрать БД
   - `\dt` - посмотреть таблицы в выбранной БД
     - возможно потребуется указать схему в формате `\dt <schema.*>`
-  - `\dt+ <table_name>` - посмотреть подробную информацию по таблице
+  - `\dt+ <schema>.<table_name>` - посмотреть подробную информацию по таблице
   - `\du` - посмотреть пользователей
-  - `SELECT * FROM <table_name>;` - посмотреть структуру таблицы и содержимое
+  - `SELECT * FROM <schema>.<table_name>;` - посмотреть структуру таблицы и содержимое
   - `CREATE USER <username> WITH PASSWORD '<password>';` - создать пользователя с паролем
   - `CREATE DATABASE <db_name>;` - создать БД
   - `GRANT ALL PRIVILEGES ON DATABASE database_name TO username;` - добавить права на таблицу пользователю (все)
