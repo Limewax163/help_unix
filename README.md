@@ -123,3 +123,16 @@ ___
 
 ___
 
+<details>
+  <summary><b>Скачивание и установка linux-kernels</b></summary>
+
+  Красиво и без заморочек можно воспользоваться инструментом `Mainline Kernels`
+  ```
+  sudo add-apt-repository ppa:cappelikan/ppa
+  sudo apt update && sudo apt full-upgrade
+  sudo apt install -y mainline
+  ```
+
+  После установки нового ядра если при загрузке системы возникает ошибка `bad shim signature` первоначально убедиться что в биосе отключен режим `secure boot`
+  
+</details>
