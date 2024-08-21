@@ -1,12 +1,12 @@
-`mysqldump -u <user> -h xxx.xxx.xxx.xxx -p --no-tablespaces <database> > backup.sql` - дамп базы данных MySQL
-
-<details>
-  <summary>Для миграции дампа таблиц:</summary>
-
-- зайти в MySQL: `mysql -p -u ` - флаг -p для запроса пароля, флаг -u для запроса пользователя
-- выбрать целевую БД: `use <dbname>`
-- указать путь до дампа: `source /path/to/database_dump.sql;` - для миграции таблиц из дампа в базу
-
-</details>
-
-`SELECT User, Host FROM mysql.user;` - посмотреть пользователей в СУБД
+- `mysqldump -u <user> -h xxx.xxx.xxx.xxx -p --no-tablespaces <database> > backup.sql` - дамп базы данных MySQL
+  - зайти в MySQL:`mysql -p -u ` - флаг -p для запроса пароля, флаг -u для запроса пользователя
+  - выбрать целевую БД: `use <dbname>`
+  - указать путь до дампа: `source /path/to/database_dump.sql;`
+- `SELECT User, Host FROM mysql.user;` - посмотреть пользователей в СУБД
+- `CREATE USER 'USER'@'%' IDENTIFIED BY 'PASSWORD';` - Создать пользователя (% - означает доступ к подключению будет с любого хоста)
+- `GRANT ALL PRIVILEGES ON DATABASE.* TO 'USER'@'%';` - Предоставление привилегий к базе данных для пользователя
+- `USE DATABASE;` - Выбрать базу
+- `SHOW TABLES;` - Показать таблицы
+- `SHOW TABLE STATUS;`- Показать статус таблиц
+- `CREATE DATABASE DATABASE;` - Создать БД
+- `mysql -u root -p DATABASE < /path/to/backup.sql` - Восстановление таблиц из бекапа 
