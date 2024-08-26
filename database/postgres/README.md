@@ -49,7 +49,7 @@ ___
 
 ### Про бекапы
 
-`psql -U <user> -d <database> -f /path/to/backup.sql` - восстановление из бекапа(дампа)
+`psql -U user -d database -h ip/host -p port/default-5432 -f /path/to/backup.sql` - восстановление из бекапа(дампа)
 
 `pg_dump -U <user> -d <database> > ./path/to/backup.sql` - дамп определенной базы данных
 
