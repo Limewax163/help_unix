@@ -47,6 +47,7 @@
   - `--reference` Копирует права от определенной директории/файла к другому формат команды будет следующим:
     - `chown/chmod --reference /path/to/source/file /path/to/target/file`
 - `systemd-analyze` - Покажет время загрузки системы (поэтапное общее и время загрузки графической оболочки)
+- `rkhunter -c --enable all --disable none` - Проверка систем Linux (Безопасность)
 ___
 
 <details>
