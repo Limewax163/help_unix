@@ -39,6 +39,10 @@ ERROR 1217 (23000): Cannot delete or update a parent row: a foreign key constrai
 ___
 
 ### Ошибка при выполнении миграций - таблица уже существуют "already exist"
+```
+SQLSTATE[42S01]: Base table or view already exists: 1050 Table '<table_name>' already exists
+```
+
 Есть два варианта решения:
 
 <details>
