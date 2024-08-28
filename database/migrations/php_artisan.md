@@ -11,16 +11,15 @@
 >1. Указать в самой БД статус миграции
 >2. Дропнуть таблицу и выполнить миграцию
 
+___
+
+### Ошибка при удалении таблицы связанная с наличием внешних ключей
+```
+ERROR 1217 (23000): Cannot delete or update a parent row: a foreign key constraint fails
+```
 <details>
-  <summary><b>Возможные ошибки</b></summary>
+  <summary>решение</summary>
 
-  ## Ошибка при удалении таблицы связанная с наличием внешних ключей
-  ```
-  ERROR 1217 (23000): Cannot delete or update a parent row: a foreign key constraint fails
-  ```
-
-  <details>
-    <summary>решение</summary>
   Посмотреть ключи:
     
   ```
@@ -37,19 +36,20 @@
   ```
   </details>
 
-  ## При выполнении миграций ошибка что таблица уже существуют "already exist"
-  Есть два варианта решения:
+___
 
-  <details>
-    <summary>1. Обозначить миграции как завершенные в БД</summary>
+### Ошибка при выполнении миграций - таблица уже существуют "already exist"
+Есть два варианта решения:
+
+<details>
+  <summary>1. Обозначить миграции как завершенные в БД</summary>
     
-    ```
-    INSERT INTO migrations (migration, batch) VALUES
-    ('<migration_title', <batch_number>),
-    ('<migration_title', <batch_number>),
-    ('<migration_title', <batch_number>);
-    ```
-  </details> 
+  ```
+  INSERT INTO migrations (migration, batch) VALUES
+  ('<migration_title', <batch_number>),
+  ('<migration_title', <batch_number>),
+  ('<migration_title', <batch_number>);
+  ```
+</details> 
+
   2. Дропнуть таблицу и выполнить миграцию
-  
-</details>
