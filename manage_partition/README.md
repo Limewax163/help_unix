@@ -8,6 +8,8 @@
 
 `fdisk /dev/sd<X>` fdisk утилита для работы с дисками (создание\удаление). Данная команда запускает эту утилиту для работы с диском `/dev/sd<X>` где `<X>` буква диска
 
+`sudo mkfs.ext4 /dev/sd<X><n>` - Форматировать раздел `n` диска `X` в ext4
+
 <details>
   <summary>FDISK COMMAND</summary>
 
@@ -32,7 +34,7 @@
 
 `lsblk -f` - этой командой смотрим UUID у раздела SWAP
 
-`sudo nano /etc/fstab' - в fstab добавляем строчку
+`sudo nano /etc/fstab` - в fstab добавляем строчку
 
 `UUID=a9fa39fe-93a8-44eb-9520-e21a308993e7 /path/to/mount      none    swap    sw      0       0`
 
