@@ -1,6 +1,6 @@
 # Mongo DB
 
-- `mongosh --username <user> --password <password>` подключение к БД под определенным пользователем
+- `mongo --username <user> --password <password>` подключение к БД под определенным пользователем
   - `--authenticationDatabase <database>` указать БД
   - `--host <ip/hostname>` указать ip/host
   - `--port <port>` указать порт (по умолчанию 27017)
