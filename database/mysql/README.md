@@ -4,6 +4,7 @@
   - указать путь до дампа: `source /path/to/database_dump.sql;`
 - `SELECT User, Host FROM mysql.user;` - посмотреть пользователей в СУБД
 - `CREATE USER 'USER'@'%' IDENTIFIED BY 'PASSWORD';` - Создать пользователя (% - означает доступ к подключению будет с любого хоста)
+- `ALTER USER 'USER'@'%' IDENTIFIED BY 'new_password';` - сменить пароль пользователю
 - `GRANT ALL PRIVILEGES ON my_database.* TO 'my_user'@'%';` - Предоставление привилегий к базе данных для пользователя
 - `USE DATABASE;` - Выбрать базу
 - `SHOW TABLES;` - Показать таблицы
