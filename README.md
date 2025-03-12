@@ -61,6 +61,7 @@
 - `service --status-all` - показывает параметры автозагрузки сервисов
 - `sudo ip link set <name> up/down` - поднять/положить сетевой адаптер на хосте
 - `sudo systemctl edit <service>` - открывает настройки конфигурации сервиса
+- `sudo systemctl reset-failed` - сбрасывает ошибки с systemctl
 ___
 
 <details>
