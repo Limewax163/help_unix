@@ -28,19 +28,39 @@
 
 </details>
 
-`sudo mkswap /dev/sdXN ` создание раздела под SWAP
+<details>
+  <summary>SWAP</summary>
 
-После создания его необходимо указать в /etc/fstab по UUID
+<details>
+  <summary>Создание SWAP целиком из логического раздела диска</summary>
 
-`lsblk -f` - этой командой смотрим UUID у раздела SWAP
+1. `sudo mkswap /dev/sdXN` создание раздела под SWAP
+2. После создания его необходимо указать в /etc/fstab по UUID
+  - `lsblk -f` - этой командой смотрим UUID у раздела SWAP
+  -  `sudo nano /etc/fstab` - в fstab добавляем строчку
+```
+UUID=a9fa39fe-93a8-44eb-9520-e21a308993e7 /path/to/mount      none    swap    sw      0       0
+```
+3. `sudo swapon -a` применяет изменения для SWAP
 
-`sudo nano /etc/fstab` - в fstab добавляем строчку
+</details>
 
-`UUID=a9fa39fe-93a8-44eb-9520-e21a308993e7 /path/to/mount      none    swap    sw      0       0`
+<details>
+  <summary>Создание SWAP из выделенного места на логическом диске</summary>
 
-`sudo swapon -a` применяет изменения для SWAP
+1. `sudo dd if=/dev/zero of=/swapfile bs=1G count=10` - создает файл swapfile в корне, размером 10Gb (10 блоков по 1 Gb)
+  - `sudo fallocate -l 1G /swapfile` - альтернативный вариант создания swap файла swapfile размером 1Gb в корне диска
+2. `sudo chmod 600 /swapfile` - выставить права для свап файла
+3. `sudo mkswap /swapfile` - инициализация swap файла
+4. `sudo swapon /swapfile` - включение свап файла
+5. В /etc/fstab заполняем строку
+```
+/swapfile  none  swap  sw  0  0
+```
 
+</details>
 
+</details>
 
 > [!NOTE]
 > Правильной практикой будет - создать отдельный раздел под SWAP размером либо RAM x2, либо 1к1
