@@ -49,7 +49,7 @@ UUID=a9fa39fe-93a8-44eb-9520-e21a308993e7 /path/to/mount      none    swap    sw
   <summary>Создание SWAP из выделенного места на логическом диске</summary>
 
 1. `sudo dd if=/dev/zero of=/swapfile bs=1G count=10` - создает файл swapfile в корне, размером 10Gb (10 блоков по 1 Gb)
-  - `sudo fallocate -l 1G /swapfile` - альтернативный вариант создания swap файла swapfile размером 1Gb в корне диска
+    - `sudo fallocate -l 1G /swapfile` - альтернативный вариант создания swap файла swapfile размером 1Gb в корне диска
 2. `sudo chmod 600 /swapfile` - выставить права для свап файла
 3. `sudo mkswap /swapfile` - инициализация swap файла
 4. `sudo swapon /swapfile` - включение свап файла
