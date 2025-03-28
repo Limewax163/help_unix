@@ -62,6 +62,8 @@
 - `sudo ip link set <name> up/down` - поднять/положить сетевой адаптер на хосте
 - `sudo systemctl edit <service>` - открывает настройки конфигурации сервиса
 - `sudo systemctl reset-failed` - сбрасывает ошибки с systemctl
+- `w` - покажет активные ssh сессии на сервере
+  - `ps -ef | grep sshd` и `sugo kill <целевой pid>` завершит процесс sshd сессии пользователя
 ___
 
 <details>
