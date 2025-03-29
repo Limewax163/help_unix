@@ -64,6 +64,9 @@
 - `sudo systemctl reset-failed` - сбрасывает ошибки с systemctl
 - `w` - покажет активные ssh сессии на сервере
   - `ps -ef | grep sshd` и `sugo kill <целевой pid>` завершит процесс sshd сессии пользователя
+- `sudo sysctl kernel.sysrq=1` - доступ к выполнению низкоуровневых команд linux (например для аварийного восстановления системы в случае сбоев)
+  - либо прописать параметр `kernel.sysrq=1` в `/etc/sysctl.conf` затем применить изменения `sudo sysctl -p`
+
 ___
 
 <details>
