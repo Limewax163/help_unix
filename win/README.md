@@ -50,3 +50,12 @@ Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 ```
 
 </details>
+
+По пересылке пакетов. Таблица на винде
+```
+Get-NetIPInterface | select ifIndex,InterfaceAlias,AddressFamily,ConnectionState,Forwarding | Sort-Object -Property IfIndex | Format-Table
+```
+Врубить пересылку
+```
+Set-NetIPInterface -InterfaceAlias "Ethernet" -Forwarding Enabled
+```
