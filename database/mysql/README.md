@@ -76,3 +76,21 @@
   ```
      
 </details>
+
+<details>
+  <summary><b>Запрос для проверки зависших dead-lock запросов</b></summary>
+
+  ```
+  SELECT 
+    ml.OBJECT_NAME      AS lock_name,
+    ml.LOCK_STATUS,
+    t.PROCESSLIST_ID,
+    t.PROCESSLIST_USER,
+    t.PROCESSLIST_HOST,
+    t.PROCESSLIST_INFO AS holding_query
+  FROM performance_schema.metadata_locks ml
+  JOIN performance_schema.threads t 
+    ON ml.OWNER_THREAD_ID = t.THREAD_ID
+  WHERE ml.LOCK_STATUS = 'GRANTED';
+  ```
+</details>
