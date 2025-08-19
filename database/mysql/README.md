@@ -93,4 +93,30 @@
     ON ml.OWNER_THREAD_ID = t.THREAD_ID
   WHERE ml.LOCK_STATUS = 'GRANTED';
   ```
+
+  ```
+  SELECT
+    holder.PROCESSLIST_ID       AS holder_session_id,
+    holder.PROCESSLIST_USER     AS holder_user,
+    holder.PROCESSLIST_HOST     AS holder_host,
+    holder.PROCESSLIST_INFO     AS holder_query,
+    waiter.PROCESSLIST_ID       AS waiting_session_id,
+    waiter.PROCESSLIST_USER     AS waiting_user,
+    waiter.PROCESSLIST_HOST     AS waiting_host,
+    waiter.PROCESSLIST_INFO     AS waiting_query,
+    ml_wait.OBJECT_TYPE         AS lock_type,
+    ml_wait.OBJECT_NAME         AS lock_name,
+    CONCAT('KILL ', holder.PROCESSLIST_ID, ';') AS kill_holder_command,
+    CONCAT('KILL ', waiter.PROCESSLIST_ID, ';') AS kill_waiter_command
+  FROM performance_schema.metadata_locks ml_wait
+  JOIN performance_schema.threads waiter
+    ON ml_wait.OWNER_THREAD_ID = waiter.THREAD_ID
+  JOIN performance_schema.metadata_locks ml_hold
+    ON ml_wait.OBJECT_NAME = ml_hold.OBJECT_NAME
+  AND ml_wait.OBJECT_TYPE = ml_hold.OBJECT_TYPE
+  AND ml_hold.LOCK_STATUS = 'GRANTED'
+  JOIN performance_schema.threads holder
+    ON ml_hold.OWNER_THREAD_ID = holder.THREAD_ID
+    WHERE ml_wait.LOCK_STATUS = 'PENDING';
+  ```
 </details>
