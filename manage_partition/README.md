@@ -84,6 +84,12 @@ UUID=a9fa39fe-93a8-44eb-9520-e21a308993e7 /path/to/mount      none    swap    sw
 ```
 sudo sh -c 'echo 1 > /sys/block/<disk>/device/rescan'
 ```
+Если подключился новый диск (так же с bash -c можно выполнить)
+```
+for host in /sys/class/scsi_host/host*/scan; do
+    echo "- - -" > $host
+done
+```
 
 3. `sudo growpart /dev/<disk> <disk_part>` Увеличивает раздел `<disk_parted>` на свободное место диска `/dev/<disk>`
 4. `sudo resize2fs /dev/<disk_part>` Изменяет размер файловой системы раздела на доступное неразмеченное место
