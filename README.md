@@ -69,6 +69,7 @@
 - `sudo do-release-upgrade` - обновление релиза Ubuntu до следующей LTS версии
   - `--allow-third-party` - использовать альтернитивные репозитории для обновления (например в случае если стандартные репозитории не отвечают, либо не подключены вовсе)
   - `-d` - обновиться до develop (NON LTS) версии
+- `dpkg-reconfigure ca-certificates` - интерактивная херабора `update-ca-certificates` - обычная херабора
 ___
 
 <details>
